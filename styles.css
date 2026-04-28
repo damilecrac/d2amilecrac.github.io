@@ -1,0 +1,348 @@
+/* Globales */
+/*Estilos de la Tienda*/
+
+/*
+Integrantes:
+-Jhon Barba
+-Adam Benedetty
+-Nayid Castro
+-Luisa Collazos
+-Angel Padilla
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* =====================================================
+   1. VARIABLES GLOBALES (Custom Properties)
+   Definidas en :root para poder reutilizarlas en todo
+   el archivo. Si quieres cambiar un color, ¡solo
+   cámbialo aquí y se actualiza en todas partes!
+===================================================== */
+:root {
+    --verde: #2d7a4f;
+    /* verde oscuro principal */
+    --verde-c: #4caf78;
+    /* verde claro (hover) */
+    --naranja: #ff7043;
+    /* acento naranja (precios, botón comprar) */
+    --amarillo: #ffd54f;
+    /* amarillo (no usado directamente, reserva) */
+    --crema: #fff8f0;
+    /* fondo claro items del carrito */
+    --texto: #1a2e1a;
+    /* color principal del texto */
+    --sombra: rgba(0, 0, 0, 0.15);
+    /* sombra estándar de tarjetas */
+    /* --- Familias tipográficas --- */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    /* elegante, para títulos */
+    --font-body: 'DM Sans', sans-serif;
+    /* legible, para texto general */
+}
+
+/*----------------------Estilos de la Tienda---------------------*/
+
+
+
+
+
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("imagenes/popo.gif");
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: var(--font-body);
+    color: white;
+    background-color: var(--crema);
+
+}
+
+.logo img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 10px;
+    width: 300px;
+    height: 180px;
+    border-radius: 50%;
+    /* quita el subrayado del enlace */
+}
+
+
+.aura {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 0 0.05em 0.25em rgba(0, 0, 0, 0.1);
+    /* sombra suave, como si brillara */
+}
+
+.icon-cart {
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+
+.icon-cart:hover {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+}
+
+.container-icon {
+    background-color: #ffffff;
+    border-radius: 30%;
+    position: relative;
+}
+
+.container-icon:hover {
+    cursor: pointer;
+    background-color: #215381;
+}
+
+
+.count-products {
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color: #000000;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos {
+    font-size: 12px;
+}
+
+.container-cart-products {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: var(--periwinkle);
+    width: 400px;
+    z-index: 1;
+    box-shadow: var(--shadow-soft);
+    border-radius: var(--radius-sm);
+
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #35012e;
+    border-radius: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+}
+
+.info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito {
+    font-size: 20px;
+    font-family: var(--font-body);
+}
+
+.precio-producto-carrito {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon-close {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover {
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total {
+    background-color: #4b3d88;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cart-empty {
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #215381;
+}
+
+.total-pagar {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart {
+    display: none;
+}
+
+button {
+
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: #08002c;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+header {
+    border-color: #ffffff;
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.carritoss {
+    text-align: right;
+    color: #ffffff;
+    font-size: 17px;
+    padding-right: 12px;
+}
+
+/* Main */
+.container-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: #08002c;
+}
+
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure {
+    overflow: hidden;
+}
+
+.item:hover img {
+    transform: scale(1.2);
+}
+
+.info-product {
+    text-align: center;
+    padding: 15px 30px;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: #ff7043;
+    margin: 10px 0;
+    padding-top: 10px;
+
+
+}
+
+.info-product button {
+    border: none;
+    background: none;
+    background-color: #167013;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.info-product button:hover {
+    background-color: #215381;
+    color: #ffffff;
+}
+
+figure img {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+figure img:hover {
+    opacity: 0.8;
+    /* Efecto visual al pasar el mouse */
+}
+
+.hidden {
+    display: none;
+}
