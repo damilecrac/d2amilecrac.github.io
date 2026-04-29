@@ -54,13 +54,12 @@ Integrantes:
 }
 
 body {
-    background-image: url("imagenes/fondobacano.gif");
+
     margin: 0 auto;
     max-width: 1200px;
     font-family: var(--font-body);
     color: white;
-    background-color: var(--crema);
-
+    background: radial-gradient(circle, #332669, #08002c)
 }
 
 .logo img {
