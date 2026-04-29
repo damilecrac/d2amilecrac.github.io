@@ -54,7 +54,7 @@ Integrantes:
 }
 
 body {
-    background-image: url("imagenes/popo.gif");
+    background-image: url("imagenes/fondobacano.gif");
     margin: 0 auto;
     max-width: 1200px;
     font-family: var(--font-body);
@@ -156,11 +156,13 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 30px;
-    background-color: #35012e;
-    border-radius: 30px;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 0px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 
 }
+
 
 .info-cart-product {
     display: flex;
@@ -195,8 +197,8 @@ header {
 }
 
 .cart-total {
-    background-color: #4b3d88;
-    border-radius: 30px;
+    background-color: #559941;
+    border-radius: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,7 +234,7 @@ button {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     color: #08002c;
-    padding: 15px 10px;
+    padding: 6px 10px;
     cursor: pointer;
     transition: all .5s;
 }
@@ -259,12 +261,7 @@ header {
     padding: 10px 20px;
 }
 
-.carritoss {
-    text-align: right;
-    color: #ffffff;
-    font-size: 17px;
-    padding-right: 12px;
-}
+
 
 /* Main */
 .container-items {
@@ -331,6 +328,13 @@ header {
 .info-product button:hover {
     background-color: #215381;
     color: #ffffff;
+
+
+}
+
+.info-product button:active {
+    padding: 17px 12px;
+    background-color: red;
 }
 
 figure img {
